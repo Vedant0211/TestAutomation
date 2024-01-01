@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<!--Error text-->
+<string name="invalid_password">Incorrect password. kindly check your password carefully</string>
+<string name="invalid_user">Your mobile number is not registered with us. Please signup !!</string>
+ 
+
+
+</resources>
