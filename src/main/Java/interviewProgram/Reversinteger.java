@@ -2,6 +2,16 @@ package interviewProgram;
 
 public class Reversinteger {
 	
+	// reverse a number using recursion
+	public static void rev(int num) {
+		if (num <10) {
+			System.out.println(num);
+			return;
+		}else {
+			System.out.print(num%10);
+			rev(num/10);
+		}
+	}
 	public static int revers(int a) {
 		int num =a;
 		int rev=0;
@@ -21,6 +31,8 @@ public class Reversinteger {
 		// TODO Auto-generated method stub
 		System.out.println(revers(123654789));
 revers1(1234567);
+
+rev(852);
 	}
 
 }
