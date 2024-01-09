@@ -15,7 +15,11 @@ public class LoginPage extends BaseTest{
 	@AndroidFindBy(id = "android:id/button1") private WebElement OkBtn;
 	@AndroidFindBy(id = "android:id/button2") private WebElement CancelBtn;
 	@AndroidFindBy(className = "android.widget.ImageButton")  private WebElement profileIcon;
-	   
+	@AndroidFindBy(id = "com.abc.abd/userNameEditText") private WebElement ForgetPassword;
+	public  ForgotPasswordPage pressForgotpass() {
+		click(ForgetPassword);
+		return new ForgotPasswordPage();
+	}
 	public LoginPage enterUserName(String username) {
 		sendKeys(usernameTxtFld, "Login With :-"+username);
 		return this;
@@ -34,6 +38,10 @@ public class LoginPage extends BaseTest{
 	}
 	public LoginPage pressLoginBtn() {
 		click(loginBtn);
+		return this;
+	}
+	public LoginPage DisplayLoginBtn() {
+		isDisplayed(loginBtn);
 		return this;
 	}
 	public String getErrTxt() {

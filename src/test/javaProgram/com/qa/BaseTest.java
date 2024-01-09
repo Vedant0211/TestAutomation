@@ -133,7 +133,9 @@ public class BaseTest {
 		WaitForVisibility(e);
 		e.click();
 	}
-	
+	public void isDisplayed(WebElement element) {
+        WaitForVisibility(element);
+	}
 	
 	public void sendKeys(WebElement e, String txt) {
 		WaitForVisibility(e);

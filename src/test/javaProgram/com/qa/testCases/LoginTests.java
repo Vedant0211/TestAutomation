@@ -38,6 +38,7 @@ public class LoginTests extends BaseTest{
 	public void beforeMethod(Method m) throws Exception {
 		loginPage=new LoginPage();
 		homePage=new HomePage();
+		loginPage.pressLoginBtn();
 	}
 
 	@AfterMethod
@@ -48,7 +49,7 @@ public class LoginTests extends BaseTest{
 
 
 	@Test
-	public void invalidLoginpassword() {
+	public void invalidLogincredentials() {
 		loginPage.enterUserName("");
 		loginPage.enterPassword("");
 		loginPage.pressLoginBtn();
@@ -56,6 +57,22 @@ public class LoginTests extends BaseTest{
 		String expextederrtext= getStrings().get("invalid_password");
 		Assert.assertEquals(actuakErrTxt, expextederrtext);
 		loginPage.pressokBtn();
+	}
+	@Test
+	public void afterInvalidCredentials_shoundDisplayLoginPage() {
+		loginPage.enterUserName("");
+		loginPage.enterPassword("");
+		loginPage.pressLoginBtn();
+		String actuakErrTxt= loginPage.getErrTxt();
+		String expextederrtext= getStrings().get("invalid_password");
+		Assert.assertEquals(actuakErrTxt, expextederrtext);
+		loginPage.pressokBtn();
+		loginPage.DisplayLoginBtn();
+	}
+	public void disableLoginButtonWhenblankfields() {
+		loginPage.DisplayLoginBtn();
+		loginPage.pressLoginBtn();
+		
 	}
 
 	@Test
