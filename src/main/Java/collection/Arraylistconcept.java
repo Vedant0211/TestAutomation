@@ -9,7 +9,7 @@ public class Arraylistconcept {
 
 	public static <E> void main(String[] args) {
 		// TODO Auto-generated method stub
-		int a[] =new int[3]; //static array --size is fix
+		int a[] =new int[5]; //static array --size is fix
 		a[0]=1;
 		a[1]=2;
 		a[2]=3;

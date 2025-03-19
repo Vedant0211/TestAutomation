@@ -33,7 +33,7 @@ public class CountTheOccurrenceOfChar {
 	public static void main(String[] args) {
 		String str="I love automation";
 		// TODO Auto-generated method stub
-		usingcharArrayCountOcc(str, 'a');
+		usingcharArrayCountOcc(str, 'L');
 		getcharcount(str, ' ');
 		getcountofcharusingStreams(str, "o");
 	}
